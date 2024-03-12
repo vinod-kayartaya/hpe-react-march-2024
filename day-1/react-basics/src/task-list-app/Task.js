@@ -4,7 +4,7 @@
 // rafce (shortcut for snippet)
 import React from 'react';
 
-const Task = ({ task, deleteTask, toggleStatus }) => {
+const Task = ({ task, deleteTask, toggleStatus, setTaskToEdit }) => {
   return (
     <>
       <h5
@@ -21,6 +21,11 @@ const Task = ({ task, deleteTask, toggleStatus }) => {
         <button
           className='bi bi-trash btn text-danger'
           onClick={() => deleteTask(task.id)}
+        ></button>
+
+        <button
+          className='bi bi-pencil btn text-primary'
+          onClick={() => setTaskToEdit(task)}
         ></button>
       </h5>
     </>

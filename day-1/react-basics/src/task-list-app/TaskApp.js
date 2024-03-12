@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TaskList from './TaskList';
 import TaskOps from './TaskOps';
+import TaskForm from './TaskForm';
 
 const initialTasks = [
   { id: 1, text: 'Learn react bascis', finished: true },
@@ -13,6 +14,7 @@ const initialTasks = [
 
 const TaskApp = () => {
   const [tasks, setTasks] = useState(initialTasks); // the parameter is used only for the first time.
+  const [taskToEdit, setTaskToEdit] = useState(null);
 
   const deleteFinishedTasks = () => {
     let filteredTasks = tasks.filter((t) => !t.finished);
@@ -43,19 +45,32 @@ const TaskApp = () => {
     setTasks(currentTasks);
   };
 
+  const addTask = (text) => {
+    const id = tasks.length === 0 ? 1 : 1 + Math.max(...tasks.map((t) => t.id));
+    setTasks([...tasks, { id, text, finished: false }]);
+  };
+
   return (
     <>
       <div className='container'>
-        <TaskList
-          tasks={tasks}
-          toggleStatus={toggleStatus}
-          deleteTask={deleteTask}
-        />
-        <TaskOps
-          deleteFinishedTasks={deleteFinishedTasks}
-          deleteAllTasks={deleteAllTasks}
-          toggleTaskStatus={toggleTaskStatus}
-        />
+        <div className='row'>
+          <div className='col-4'>
+            <TaskForm addTask={addTask} taskToEdit={taskToEdit} />
+          </div>
+          <div className='col-6'>
+            <TaskList
+              setTaskToEdit={setTaskToEdit}
+              tasks={tasks}
+              toggleStatus={toggleStatus}
+              deleteTask={deleteTask}
+            />
+            <TaskOps
+              deleteFinishedTasks={deleteFinishedTasks}
+              deleteAllTasks={deleteAllTasks}
+              toggleTaskStatus={toggleTaskStatus}
+            />
+          </div>
+        </div>
       </div>
     </>
   );
