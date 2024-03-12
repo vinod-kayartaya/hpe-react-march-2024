@@ -50,12 +50,26 @@ const TaskApp = () => {
     setTasks([...tasks, { id, text, finished: false }]);
   };
 
+  const updateTask = (id, text) => {
+    let currentTasks = [...tasks];
+    let task = currentTasks.find((t) => t.id === id);
+    if (!task) return;
+
+    task.text = text;
+    setTasks(currentTasks);
+  };
+
   return (
     <>
       <div className='container'>
         <div className='row'>
           <div className='col-4'>
-            <TaskForm addTask={addTask} taskToEdit={taskToEdit} />
+            <TaskForm
+              addTask={addTask}
+              taskToEdit={taskToEdit}
+              updateTask={updateTask}
+              setTaskToEdit={setTaskToEdit}
+            />
           </div>
           <div className='col-6'>
             <TaskList
