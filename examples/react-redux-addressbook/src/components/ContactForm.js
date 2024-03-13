@@ -135,8 +135,6 @@ const ContactForm = () => {
 
         <button className='btn btn-primary'>Submit</button>
       </form>
-
-      {JSON.stringify(contact)}
     </>
   );
 };

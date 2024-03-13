@@ -1,3 +1,4 @@
+import ContactDetails from './components/ContactDetails';
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import Header from './components/Header';
@@ -9,13 +10,15 @@ function App() {
     <Provider store={store}>
       <Header />
       <div className='container'>
-        {/* .row>.col*3 */}
         <div className='row'>
-          <div className='col-5'>
+          <div className='col-4'>
             <ContactForm />
           </div>
-          <div className='col-7'>
+          <div className='col-4'>
             <ContactList />
+          </div>
+          <div className='col-4'>
+            <ContactDetails />
           </div>
         </div>
       </div>
