@@ -13,24 +13,26 @@ import { useReducer, useState } from 'react';
 }
 */
 
-const initialState = { names: ['Vinod', 'Shyam', 'John Doe', 'Jane Doe'] };
+const initialState = {
+  names: ['Vinod', 'Shyam', 'John', 'Jane'],
+};
 
 // this reducer function is called react whenever a dispatch of an action is done
 const reducer = (state, action) => {
   console.log('inside reducer, state is', state, ' and action is', action);
   switch (action.type) {
     case 'DELETE_NAME': {
-      let { names } = state;
+      let names = [...state.names];
       names.splice(action.payload, 1);
       return { ...state, names };
     }
     case 'ADD_NAME': {
-      let { names } = state;
+      let names = [...state.names];
       names.push(action.payload);
       return { ...state, names };
     }
     case 'SORT_NAMES': {
-      let { names } = state;
+      let names = [...state.names];
       names.sort();
       return { ...state, names };
     }
