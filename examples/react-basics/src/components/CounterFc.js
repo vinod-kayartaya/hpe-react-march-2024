@@ -6,10 +6,12 @@ const CounterFc = () => {
   const [count, setCount] = useState(() => 0); // first time, this will create a state with 0 as the value
   // and subsequent calls (due to setCount() calls) will only fetch the current state (which is modified by setCount)
 
-  const increment = useCallback(() => {
+  const increment = () => {
     setCount(count + 1);
-  }, [count]);
+  };
 
+  // a new functio object (parameter in the useCallback) is only created if there is a change in the value of `count`
+  // otherwise, the function being stored in the cache (memoization) is being reassigned.
   const decrement = useCallback(() => {
     setCount(count - 1);
   }, [count]);
