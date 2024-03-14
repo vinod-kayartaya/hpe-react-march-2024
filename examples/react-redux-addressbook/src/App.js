@@ -18,7 +18,7 @@ function App() {
             <ContactList />
           </div>
           <div className='col-4'>
-            <ContactDetails />
+            <ContactDetails  />
           </div>
         </div>
       </div>

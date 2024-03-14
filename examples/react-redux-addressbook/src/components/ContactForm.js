@@ -12,11 +12,11 @@ const ContactForm = () => {
     gender: 'Male',
     city: 'Bangalore',
     email: '',
-    phone: '',
+    phone: ''
   });
 
-  const changeHandler = ({ target: { name, value } }) => {
-    setContact({ ...contact, [name]: value });
+  const changeHandler = (e) => {
+    setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {

@@ -11,7 +11,6 @@ import {
 // you are free to use different keys, but it is community standard
 
 export const addContact = (contact) => {
-  console.log('in addContact, contact is', contact);
   return { type: ADD_CONTACT, payload: contact };
 };
 

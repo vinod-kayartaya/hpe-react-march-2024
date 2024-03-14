@@ -1,0 +1,55 @@
+http://localhost:4000/customers?_limit=5
+
+###
+
+https://www.omdbapi.com/?apikey=aa9e49f&s=spider
+
+###
+GET /customers
+Host: localhost:4000
+Accept: application/json
+
+###
+
+POST /customers
+Host: localhost:4000
+Content-Type: application/json
+Accept: application/json
+
+{
+    "firstname": "Vinod",
+    "lastname": "Kumar"
+}
+
+###
+
+GET /customers/b2ae
+Host: localhost:4000
+Accept: application/json
+
+###
+put /customers/b2ae
+Host: localhost:4000
+Content-Type: application/json
+Accept: application/json
+
+{
+    "firstname": "Vinod",
+    "email": "vinod@vinod.co"
+}
+
+###
+
+patch /customers/2YK2JM0NQ35
+Host: localhost:4000
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "fconville0@xmpl.com"
+}
+
+### 
+delete /customers/2YK2JM0NQ35
+Host: localhost:4000
+Accept: application/json
