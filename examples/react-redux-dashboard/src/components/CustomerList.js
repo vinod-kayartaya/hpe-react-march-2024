@@ -1,30 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchAllContacts } from '../redux/actions/customers-action-creators';
+import { fetchAllCustomers } from '../redux/actions/customers-action-creators';
+import CustomerCard from './CustomerCard';
 
 const CustomerList = () => {
+  const [page, setPage] = useState(1);
   const { error, customers } = useSelector((store) => store.customerReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // this is an EFFECT executed only once when the component is mounted.
-    console.log('component is mounted');
-
-    return () => {
-      // this is a function executed when the component is unmounted
-      console.log('component is unmounted');
-    };
-
-  }, []);
-
-  useEffect(() => {
-    // fetchAllContacts().then(dispatch)
-
+    console.log('CustomerList.useEffect-1 called');
     (async () => {
-      const action = await fetchAllContacts();
+      const action = await fetchAllCustomers(page);
       dispatch(action);
     })();
-  }, []);
+  }, [page]);
+
+  const prevPage = () => {
+    if (page === 1) return;
+    setPage(page - 1);
+  };
+
+  const nextPage = () => {
+    setPage(page + 1);
+  };
 
   return (
     <>
@@ -32,14 +31,26 @@ const CustomerList = () => {
         <h3 className='text-danger'>{error}</h3>
       ) : (
         <>
-          <h3>Customer list</h3>
-          <ul className='list-group'>
-            {customers.map((c) => (
-              <li key={c.id} className='list-group-item'>
-                {c.gender === 'Male' ? 'Mr.' : 'Ms.'} {c.firstname} {c.lastname}
-              </li>
-            ))}
-          </ul>
+          {/* .row>.col-4+.col-8 */}
+          <div className='row'>
+            <div className='col-4'>{/* customer form here */}</div>
+            <div className='col-8'>
+              <div className='row'>
+                {customers.map((c) => (
+                  <CustomerCard key={c.id} customer={c} page={page} />
+                ))}
+              </div>
+              <button
+                disabled={page === 1}
+                onClick={prevPage}
+                className='lead btn btn-primary mx-1 bi bi-arrow-left-circle'
+              ></button>
+              <button
+                onClick={nextPage}
+                className='lead btn btn-primary mx-1 bi bi-arrow-right-circle'
+              ></button>
+            </div>
+          </div>
         </>
       )}
     </>

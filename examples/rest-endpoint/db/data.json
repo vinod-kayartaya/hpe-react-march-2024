@@ -1,46 +1,6 @@
 {
   "customers": [
     {
-      "id": "3W02R44RH19",
-      "firstname": "Elyssa",
-      "lastname": "Falcus",
-      "gender": "Female",
-      "email": "efalcus1@reddit.com",
-      "phone": "7402611065",
-      "avatar": "https://robohash.org/sintofficiisaspernatur.png?size=150x150&set=set1",
-      "city": "Columbus"
-    },
-    {
-      "id": "4M51U58NN60",
-      "firstname": "Roslyn",
-      "lastname": "Pagitt",
-      "gender": "Female",
-      "email": "rpagitt2@shinystat.com",
-      "phone": "7306369941",
-      "avatar": "https://robohash.org/nihilmolestiasprovident.png?size=150x150&set=set1",
-      "city": "Sungaimaja"
-    },
-    {
-      "id": "9U28V75YD23",
-      "firstname": "Dulcia",
-      "lastname": "Huetson",
-      "gender": "Female",
-      "email": "dhuetson3@cnn.com",
-      "phone": "2439602112",
-      "avatar": "https://robohash.org/inciduntcumodio.png?size=150x150&set=set1",
-      "city": "Mouriscas"
-    },
-    {
-      "id": "2RQ7W99UV99",
-      "firstname": "Zarah",
-      "lastname": "Cankett",
-      "gender": "Female",
-      "email": "zcankett4@360.cn",
-      "phone": "7017352912",
-      "avatar": "https://robohash.org/quisquamnihilqui.png?size=150x150&set=set1",
-      "city": "Martaban"
-    },
-    {
       "id": "6DM5W28AR60",
       "firstname": "Farr",
       "lastname": "Heeran",
@@ -69,16 +29,6 @@
       "phone": "8736292736",
       "avatar": "https://robohash.org/itaquequosexplicabo.png?size=150x150&set=set1",
       "city": "Picos"
-    },
-    {
-      "id": "8P42JP7HY51",
-      "firstname": "Alberik",
-      "lastname": "Earnshaw",
-      "gender": "Male",
-      "email": "aearnshaw8@smugmug.com",
-      "phone": "6392673956",
-      "avatar": "https://robohash.org/aliasmolestiaecum.png?size=150x150&set=set1",
-      "city": "Sanxianling"
     },
     {
       "id": "8FY4CU9TJ78",
@@ -121,16 +71,6 @@
       "city": "Lochovice"
     },
     {
-      "id": "8P47QD1CX66",
-      "firstname": "Lauren",
-      "lastname": "Rosoman",
-      "gender": "Female",
-      "email": "lrosomand@cnbc.com",
-      "phone": "5023694072",
-      "avatar": "https://robohash.org/recusandaepraesentiumquidem.png?size=150x150&set=set1",
-      "city": "Guaduas"
-    },
-    {
       "id": "9G31WA6MH71",
       "firstname": "Elbert",
       "lastname": "Niccolls",
@@ -159,16 +99,6 @@
       "phone": "4263848724",
       "avatar": "https://robohash.org/autmolestiaealias.png?size=150x150&set=set1",
       "city": "Ewirgol"
-    },
-    {
-      "id": "1TV1D52CF61",
-      "firstname": "Felic",
-      "lastname": "Lovart",
-      "gender": "Male",
-      "email": "flovarth@artisteer.com",
-      "phone": "2849227115",
-      "avatar": "https://robohash.org/aperiamdoloreligendi.png?size=150x150&set=set1",
-      "city": "Pescadería"
     },
     {
       "id": "8Y41V25JA78",
@@ -299,16 +229,6 @@
       "phone": "8205700251",
       "avatar": "https://robohash.org/voluptaterepudiandaequi.png?size=150x150&set=set1",
       "city": "Klenovyy"
-    },
-    {
-      "id": "2PY7PM8WV49",
-      "firstname": "Ham",
-      "lastname": "Keam",
-      "gender": "Male",
-      "email": "hkeamv@fotki.com",
-      "phone": "8474049249",
-      "avatar": "https://robohash.org/rationefugitcupiditate.png?size=150x150&set=set1",
-      "city": "Khánh Hải"
     },
     {
       "id": "6YD4E65VE62",
@@ -9989,11 +9909,6 @@
       "phone": "5907893041",
       "avatar": "https://robohash.org/nobisexpeditaquam.png?size=150x150&set=set1",
       "city": "Nizhnyaya Tura"
-    },
-    {
-      "firstname": "Vinod",
-      "email": "vinod@vinod.co",
-      "id": "b2ae"
     },
     {
       "id": "d009",

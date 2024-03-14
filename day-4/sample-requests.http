@@ -50,6 +50,6 @@ Accept: application/json
 }
 
 ### 
-delete /customers/2YK2JM0NQ35
+delete /customers/b2ae
 Host: localhost:4000
 Accept: application/json

@@ -32,6 +32,8 @@ const customerReducer = (state = initialState, action) => {
 
   if (action.type === DELETE_CUSTOMER) {
     // action.payload is the deleted id
+    // 1. this is called only after the data in the REST is deleted
+    // 2. now we are supposed update the store, so that the component is updated
     let customers = state.customers.filter((c) => c.id !== action.payload);
     return { ...state, customers, error: null };
   }
