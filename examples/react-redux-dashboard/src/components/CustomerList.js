@@ -31,25 +31,21 @@ const CustomerList = () => {
         <h3 className='text-danger'>{error}</h3>
       ) : (
         <>
-          {/* .row>.col-4+.col-8 */}
+          <h3>Customer list (page {page})</h3>
+          <button
+            disabled={page === 1}
+            onClick={prevPage}
+            className='lead btn btn-primary mx-1 bi bi-arrow-left-circle'
+          ></button>
+
+          <button
+            onClick={nextPage}
+            className='lead btn btn-primary bi bi-arrow-right-circle float-end'
+          ></button>
           <div className='row'>
-            <div className='col-4'>{/* customer form here */}</div>
-            <div className='col-8'>
-              <div className='row'>
-                {customers.map((c) => (
-                  <CustomerCard key={c.id} customer={c} page={page} />
-                ))}
-              </div>
-              <button
-                disabled={page === 1}
-                onClick={prevPage}
-                className='lead btn btn-primary mx-1 bi bi-arrow-left-circle'
-              ></button>
-              <button
-                onClick={nextPage}
-                className='lead btn btn-primary mx-1 bi bi-arrow-right-circle'
-              ></button>
-            </div>
+            {customers.map((c) => (
+              <CustomerCard key={c.id} customer={c} page={page} />
+            ))}
           </div>
         </>
       )}
