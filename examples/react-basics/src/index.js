@@ -6,9 +6,10 @@ import NamesComponent from './hooks-demo/NamesComponent';
 import UserForm from './hooks-demo/UserForm';
 import MovieTitles from './hooks-demo/MovieTitles';
 import CounterFc from './components/CounterFc';
+import Counter from './components/Counter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  <CounterFc />
+  <Counter />
   // </React.StrictMode>
 );

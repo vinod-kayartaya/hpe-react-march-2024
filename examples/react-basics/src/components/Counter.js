@@ -6,7 +6,11 @@ export default class Counter extends Component {
   state = { count: 123 };
 
   increment = () => {
-    this.setState({ count: this.state.count + 1 });
+    console.log('before increment, count is', this.state.count);
+    this.setState({ count: this.state.count + 1 }, ()=>{
+      console.log('after increment, count is', this.state.count);
+    });
+    
   };
 
   decrement = () => {
