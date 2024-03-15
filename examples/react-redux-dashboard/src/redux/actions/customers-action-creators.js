@@ -3,6 +3,7 @@ import {
   FETCH_ALL_CUSTOMERS,
   ACTION_ERROR,
   DELETE_CUSTOMER,
+  ADD_CUSTOMER,
 } from '../types/action-types';
 
 const baseUrl = 'http://localhost:4000/customers';
@@ -21,6 +22,15 @@ export const deleteCustomer = async (id) => {
     // await axios.delete(`${baseUrl}/${id}`);
     await fetch(`${baseUrl}/${id}`, { method: 'DELETE' }); // wait until the promise is resolved
     return { type: DELETE_CUSTOMER, payload: id };
+  } catch (err) {
+    return { type: ACTION_ERROR, payload: err.message };
+  }
+};
+
+export const addCustomer = async (customer) => {
+  try {
+    const { data } = await axios.post(baseUrl, customer);
+    return { type: ADD_CUSTOMER, payload: data };
   } catch (err) {
     return { type: ACTION_ERROR, payload: err.message };
   }

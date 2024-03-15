@@ -25,8 +25,8 @@ const customerReducer = (state = initialState, action) => {
 
   if (action.type === ADD_CUSTOMER) {
     // action.payload is the newly added customer (to the REST server)
-    let customers = { ...state.customers }; // shallow copy to avoid mutation
-    customers.push(action.payload);
+    let customers = [...state.customers]; // shallow copy to avoid mutation
+    customers.unshift(action.payload);
     return { ...state, customers, error: null };
   }
 

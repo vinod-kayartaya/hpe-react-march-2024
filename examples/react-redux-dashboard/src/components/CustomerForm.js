@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { addCustomer } from '../redux/actions/customers-action-creators';
 
 const initialCustomerValue = {
   firstname: '',
@@ -15,19 +16,47 @@ const CustomerForm = () => {
   const dispatch = useDispatch();
 
   const [customer, setCustomer] = useState({ ...initialCustomerValue });
+  const [errors, setErrors] = useState({});
 
   const changeHandler = (e) => {
     setCustomer({ ...customer, [e.target.name]: e.target.value });
   };
 
-  const submitHandler = (e) => {
+  const validate = () => {
+    const errors = {};
+    // fill the errors object with error messages along with the fields
+    // if any validation violation
+    if (!customer.firstname.trim()) {
+      errors.firstname = 'Firstname is required';
+    }
+
+    if (!customer.email.trim()) {
+      errors.email = 'Email is required';
+    }
+
+    if (!customer.phone.trim()) {
+      errors.phone = 'Phone is required';
+    }
+
+    return errors;
+  };
+
+  const submitHandler = async (e) => {
     e.preventDefault();
 
     // some validation is to be done before we can submit
+    const errors = validate();
 
-    // dispatch(await addCustomer(customer));
-
-    setCustomer({ ...initialCustomerValue });
+    if (Object.keys(errors).length === 0) {
+      // no validation error
+      // proceed to add
+      dispatch(await addCustomer(customer));
+      setCustomer({ ...initialCustomerValue });
+      setErrors({});
+      window.alert('New customer added');
+    } else {
+      setErrors(errors);
+    }
   };
 
   return (
@@ -73,6 +102,9 @@ const CustomerForm = () => {
             id='firstnameInput'
             onChange={changeHandler}
           />
+          {errors.firstname && (
+            <small className='text-danger'>{errors.firstname}</small>
+          )}
         </div>
         <div className='mb-3'>
           <label htmlFor='lastnameInput' className='form-label'>
@@ -112,6 +144,9 @@ const CustomerForm = () => {
             id='emailInput'
             onChange={changeHandler}
           />
+          {errors.email && (
+            <small className='text-danger'>{errors.email}</small>
+          )}
         </div>
         <div className='mb-3'>
           <label htmlFor='phoneInput' className='form-label'>
@@ -125,6 +160,9 @@ const CustomerForm = () => {
             id='phoneInput'
             onChange={changeHandler}
           />
+          {errors.phone && (
+            <small className='text-danger'>{errors.phone}</small>
+          )}
         </div>
         <div className='mb-3'>
           <label htmlFor='avatarInput' className='form-label'>

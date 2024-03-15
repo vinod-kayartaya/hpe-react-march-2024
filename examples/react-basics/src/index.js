@@ -7,9 +7,10 @@ import UserForm from './hooks-demo/UserForm';
 import MovieTitles from './hooks-demo/MovieTitles';
 import CounterFc from './components/CounterFc';
 import Counter from './components/Counter';
+import Main from './lifecycle-demo/Main';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  <Counter />
+  <Main />
   // </React.StrictMode>
 );

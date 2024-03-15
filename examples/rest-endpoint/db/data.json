@@ -1,16 +1,6 @@
 {
   "customers": [
     {
-      "id": "6DM5W28AR60",
-      "firstname": "Farr",
-      "lastname": "Heeran",
-      "gender": "Male",
-      "email": "fheeran5@businesswire.com",
-      "phone": "2261744575",
-      "avatar": "https://robohash.org/namestlaboriosam.png?size=150x150&set=set1",
-      "city": "Chilmāri"
-    },
-    {
       "id": "1P10NU6VU40",
       "firstname": "Matthias",
       "lastname": "Ceyssen",
@@ -9891,9 +9881,24 @@
       "city": "Nizhnyaya Tura"
     },
     {
-      "id": "d009",
+      "id": "6797",
       "firstname": "Vinod",
-      "lastname": "Kumar"
+      "lastname": "Kumar",
+      "gender": "Male",
+      "city": "Bangalore",
+      "email": "vinod@vinod.co",
+      "phone": "9731424784",
+      "avatar": "https://avatars.githubusercontent.com/u/109946821?v=4"
+    },
+    {
+      "id": "20a9",
+      "firstname": "Kishore",
+      "lastname": "",
+      "gender": "Male",
+      "city": "Bangalore",
+      "email": "kishore@xmpl.com",
+      "phone": "929292929",
+      "avatar": "https://robohash.org/namestlaboriosam.png?size=150x150&set=set1"
     }
   ]
 }
