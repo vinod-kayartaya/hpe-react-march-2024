@@ -61,7 +61,7 @@ const CustomerForm = () => {
 
   return (
     <>
-      <h3 class='mb-3'>Customer details</h3>
+      <h3 className='mb-3'>Customer details</h3>
       <form onSubmit={submitHandler}>
         <div className='mb-3'>
           <input

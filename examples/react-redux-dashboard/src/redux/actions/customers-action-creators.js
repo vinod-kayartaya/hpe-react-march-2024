@@ -4,9 +4,19 @@ import {
   ACTION_ERROR,
   DELETE_CUSTOMER,
   ADD_CUSTOMER,
+  FETCH_ONE_CUSTOMER,
 } from '../types/action-types';
 
 const baseUrl = 'http://localhost:4000/customers';
+
+export const fetchOneCustomer = async (customerId) => {
+  try {
+    const { data } = await axios.get(`${baseUrl}/${customerId}`);
+    return { type: FETCH_ONE_CUSTOMER, payload: data };
+  } catch (err) {
+    return { type: ACTION_ERROR, payload: err.message };
+  }
+};
 
 export const fetchAllCustomers = async (pageNo = 1) => {
   try {

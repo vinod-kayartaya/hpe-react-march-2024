@@ -4,6 +4,7 @@ import {
   deleteCustomer,
   fetchAllCustomers,
 } from '../redux/actions/customers-action-creators';
+import { Link } from 'react-router-dom';
 
 const CustomerCard = ({ customer, page }) => {
   const dispatch = useDispatch();
@@ -13,6 +14,10 @@ const CustomerCard = ({ customer, page }) => {
 
     dispatch(await deleteCustomer(customer.id));
     dispatch(await fetchAllCustomers(page));
+  };
+
+  const queryParams = {
+    customerId: customer.id,
   };
 
   return (
@@ -32,10 +37,17 @@ const CustomerCard = ({ customer, page }) => {
                 onClick={deleteHandler}
                 className='btn btn-link bi bi-x-circle-fill text-danger float-end'
               ></button>
-              <h5 className='card-title'>
-                {customer.gender === 'Male' ? 'Mr.' : 'Ms.'}{' '}
-                {customer.firstname} {customer.lastname}
-              </h5>
+              <Link
+                to={{
+                  pathname: '/customer-details',
+                  search: new URLSearchParams(queryParams).toString(),
+                }}
+              >
+                <h5 className='card-title'>
+                  {customer.gender === 'Male' ? 'Mr.' : 'Ms.'}{' '}
+                  {customer.firstname} {customer.lastname}
+                </h5>
+              </Link>
               <p className='card-text mt-5'>
                 <small className='text-body-secondary'>{customer.city}</small>
               </p>
