@@ -14,6 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Layout />}>
+            <Route path='' element={<CustomerList />} />{' '}
+            {/* place this in the outlet of Layout */}
             <Route path='new-customer' element={<CustomerForm />} />
             <Route path='customer-list' element={<CustomerList />} />
             <Route path='customer-details' element={<CustomerDetails />} />

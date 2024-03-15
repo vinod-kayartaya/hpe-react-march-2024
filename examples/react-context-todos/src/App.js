@@ -1,3 +1,4 @@
+import Box from './components/Box';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import TodoDataProvider from './providers/TodoDataProvider';
@@ -8,17 +9,23 @@ function App() {
       <TodoDataProvider>
         <div className='alert alert-primary'>
           <div className='container'>
-            <h1>React Context API Demo</h1>
-            <h3>Todo tasks Manager</h3>
+            <Box color='red'>
+              <h1>React Context API Demo</h1>
+              <h3>Todo tasks Manager</h3>
+            </Box>
           </div>
         </div>
         <div className='container'>
           <div className='row'>
             <div className='col-4'>
-              <TodoForm />
+              <Box>
+                <TodoForm />
+              </Box>
             </div>
             <div className='col-4'>
-              <TodoList />
+              <Box>
+                <TodoList />
+              </Box>
             </div>
           </div>
         </div>

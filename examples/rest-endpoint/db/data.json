@@ -1,16 +1,6 @@
 {
   "customers": [
     {
-      "id": "4F91XP1TG31",
-      "firstname": "Daisie",
-      "lastname": "Bottlestone",
-      "gender": "Female",
-      "email": "dbottlestonec@mapquest.com",
-      "phone": "7506735818",
-      "avatar": "https://robohash.org/praesentiumremeaque.png?size=150x150&set=set1",
-      "city": "Lochovice"
-    },
-    {
       "id": "9G31WA6MH71",
       "firstname": "Elbert",
       "lastname": "Niccolls",
