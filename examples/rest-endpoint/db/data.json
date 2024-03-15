@@ -1,56 +1,6 @@
 {
   "customers": [
     {
-      "id": "1P10NU6VU40",
-      "firstname": "Matthias",
-      "lastname": "Ceyssen",
-      "gender": "Male",
-      "email": "mceyssen6@yale.edu",
-      "phone": "1219467544",
-      "avatar": "https://robohash.org/ipsaquiaporro.png?size=150x150&set=set1",
-      "city": "Popasna"
-    },
-    {
-      "id": "6AK4V80PP83",
-      "firstname": "Ericha",
-      "lastname": "O'Keefe",
-      "gender": "Female",
-      "email": "eokeefe7@dion.ne.jp",
-      "phone": "8736292736",
-      "avatar": "https://robohash.org/itaquequosexplicabo.png?size=150x150&set=set1",
-      "city": "Picos"
-    },
-    {
-      "id": "8FY4CU9TJ78",
-      "firstname": "Edward",
-      "lastname": "Orring",
-      "gender": "Male",
-      "email": "eorring9@youtube.com",
-      "phone": "7812867524",
-      "avatar": "https://robohash.org/ipsumutest.png?size=150x150&set=set1",
-      "city": "Springfield"
-    },
-    {
-      "id": "6AU9VD1PH25",
-      "firstname": "Morgan",
-      "lastname": "Stuffins",
-      "gender": "Female",
-      "email": "mstuffinsa@skype.com",
-      "phone": "4024548011",
-      "avatar": "https://robohash.org/fugitquiaaut.png?size=150x150&set=set1",
-      "city": "Cochadas"
-    },
-    {
-      "id": "5EA7FM7EA94",
-      "firstname": "Husain",
-      "lastname": "Causley",
-      "gender": "Male",
-      "email": "hcausleyb@yahoo.com",
-      "phone": "2677204635",
-      "avatar": "https://robohash.org/providentofficiadebitis.png?size=150x150&set=set1",
-      "city": "Yaozhou"
-    },
-    {
       "id": "4F91XP1TG31",
       "firstname": "Daisie",
       "lastname": "Bottlestone",

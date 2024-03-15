@@ -1,18 +1,29 @@
 import {
   ACTION_ERROR,
   ADD_CUSTOMER,
+  CLEAR_SEARCH_RESULT,
   DELETE_CUSTOMER,
   FETCH_ALL_CUSTOMERS,
   FETCH_ONE_CUSTOMER,
+  SEARCH_BY_PHONE_EMAIL,
 } from '../types/action-types';
 
 const initialState = {
   customers: [],
   selectedCustomer: null,
   error: null,
+  searchResult: [],
 };
 
 const customerReducer = (state = initialState, action) => {
+  if (action.type === CLEAR_SEARCH_RESULT) {
+    return { ...state, searchResult: [] };
+  }
+
+  if (action.type === SEARCH_BY_PHONE_EMAIL) {
+    return { ...state, searchResult: action.payload };
+  }
+
   if (action.type === FETCH_ALL_CUSTOMERS) {
     // assumption is that the action.payload is the customers list from the REST
     return { ...state, customers: action.payload, error: null };
