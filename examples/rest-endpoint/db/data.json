@@ -1,16 +1,6 @@
 {
   "customers": [
     {
-      "id": "9G31WA6MH71",
-      "firstname": "Elbert",
-      "lastname": "Niccolls",
-      "gender": "Male",
-      "email": "eniccollse@alexa.com",
-      "phone": "5556907329",
-      "avatar": "https://robohash.org/nullavoluptatemsed.png?size=150x150&set=set1",
-      "city": "Nguru"
-    },
-    {
       "id": "1MG9MR9JC47",
       "firstname": "Bunni",
       "lastname": "Klaaassen",
